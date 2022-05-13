@@ -1,0 +1,29 @@
+.how-it-works-step {
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+
+.how-it-works-step {
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+
+.how-it-works-item:hover {
+  transform: scale(1.025);
+  transition: transform 0.1s ease-in;
+}
+
+.how-it-works-item i {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+.how-it-works-item h4 {
+  margin: 0.5rem 0;
+}
+
+.how-it-works-item p {
+  margin: 0;
+}

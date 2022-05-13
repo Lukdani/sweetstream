@@ -1,0 +1,9 @@
+.get-started-intro {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.get-started-photo {
+  max-width: 200px;
+  border-radius: 100%;
+}

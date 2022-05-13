@@ -1,0 +1,64 @@
+.turbine-spinner-container {
+  position: relative;
+  margin: auto;
+}
+
+.turbine-spinner {
+  display: grid;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.turbine-spinner-pole,
+.turbine-spinner-engine {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.turbine-spinner-engine {
+  position: relative;
+  z-index: 1;
+}
+
+.turbine-spinner-engine-motor {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -5px);
+  left: 50%;
+  z-index: 1;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+}
+
+/*238, 238, 238, 1*/
+.turbine-spinner-wing-container {
+  display: grid;
+  animation: rotateAnimation 3s infinite linear;
+}
+
+.turbine-spinner-wing-container.turbine-spinner-wing-container--animateOnScroll {
+  animation: rotateAnimation 1s infinite linear;
+}
+
+.turbine-spinner-wing-container.turbine-spinner-wing-container--animationDisabled {
+  animation-play-state: paused;
+}
+
+.turbine-spinner-wing {
+  height: 120px;
+  width: 10px;
+  border-radius: 50% 50% 15% 15%;
+  grid-column: 1;
+  grid-row: 1;
+  transform-origin: 50% 50%;
+  background: var(--mediumGray);
+}
+
+@keyframes rotateAnimation {
+  to {
+    transform: rotateZ(360deg);
+  }
+}

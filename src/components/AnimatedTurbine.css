@@ -1,0 +1,167 @@
+.animated-turbine-container {
+  position: relative;
+  margin: auto;
+}
+
+.animated-turbine {
+  display: grid;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.animated-turbine-pole,
+.animated-turbine-engine {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.animated-turbine-pole {
+  background: rgb(189, 189, 189);
+  background: linear-gradient(
+    90deg,
+    rgba(189, 189, 189, 1) 0%,
+    rgba(238, 238, 238, 1) 100%
+  );
+  align-self: end;
+  width: 10px;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.animated-turbine-engine {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-turbine-engine-motor {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -5px);
+  left: 50%;
+  z-index: 1;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+}
+
+.animated-turbine-engine-motor,
+.animated-turbine-engine .animated-turbine-wing {
+  background: rgb(255, 254, 254);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 254, 254, 1) 0%,
+    rgba(250, 250, 250, 1) 33%
+  );
+}
+
+/*238, 238, 238, 1*/
+.animated-turbine-wing-container {
+  display: grid;
+  animation: rotateAnimation 3s infinite linear;
+}
+
+.animated-turbine-wing-container.animated-turbine-wing-container--animateOnScroll {
+  animation: rotateAnimation 1s infinite linear;
+}
+
+.animated-turbine-wing-container.animated-turbine-wing-container--animationDisabled {
+  animation-play-state: paused;
+}
+
+.animated-turbine-wing {
+  height: 120px;
+  width: 10px;
+  border-radius: 50% 50% 15% 15%;
+  grid-column: 1;
+  grid-row: 1;
+  transform-origin: 50% 50%;
+  background: var(--light);
+}
+
+@keyframes rotateAnimation {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.animated-turbine-grass {
+  height: 10px;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  transform: translatex(-50%);
+  z-index: 10;
+}
+
+.animated-turbine-grass div:nth-child(1) {
+  height: 10px;
+  width: 50px;
+  z-index: 1;
+}
+
+.animated-turbine-grass-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.animated-turbine-grass-items div {
+  background: rgb(112, 168, 84);
+  border-radius: 1rem 1rem 0 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.animated-turbine-grass div:nth-child(1) {
+  background: linear-gradient(
+    180deg,
+    rgba(112, 168, 84, 1) 5%,
+    rgba(99, 151, 73, 1) 90%
+  );
+  border-radius: 1rem 1rem 0.25rem 0.25rem;
+}
+
+.animated-turbine-grass-items div:nth-child(1) {
+  transform: translate(-50%, 0) rotate(-40deg);
+}
+
+.animated-turbine-grass-items div:nth-child(2) {
+  transform: rotate(-20deg);
+}
+
+.animated-turbine-grass-items div:nth-child(3) {
+  transform: translate(0, 0) rotate(0deg);
+}
+.animated-turbine-grass-items div:nth-child(4) {
+  transform: translate(50%, 0) rotate(20deg);
+}
+.animated-turbine-grass-items div:nth-child(5) {
+  transform: translate(50%, 0) rotate(40deg);
+}
+
+.animated-turbine-binary-item {
+  position: absolute;
+  animation: flyUp 1.5s linear;
+  animation-fill-mode: forwards;
+  opacity: 0.8;
+  font-family: monospace;
+}
+
+@keyframes flyUp {
+  to {
+    top: -10px;
+    opacity: 0.1;
+    visibility: hidden;
+  }
+}

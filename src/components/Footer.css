@@ -1,0 +1,38 @@
+footer {
+  margin-top: auto;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.footer-partners img {
+  width: 250px;
+  padding: 0.5rem;
+}
+
+.footer-partners img:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.footer-partners-background {
+  background: var(--light);
+}
+
+.footer-contact-item {
+  margin-bottom: 0.25rem;
+}
+
+.footer-some {
+  text-align: right;
+}
+
+.footer-some a {
+  font-size: 3rem;
+  display: inline-block;
+  color: var(--light);
+  transition: all ease-in 0.15s;
+}
+
+.footer-some a:hover {
+  transform: scale(1.15);
+  color: var(--primary);
+}

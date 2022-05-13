@@ -1,0 +1,16 @@
+.pitchLine {
+  background-color: var(--primary);
+  color: var(--light);
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.pitchLine i {
+  font-size: 2rem;
+}
+
+.pitchLine-turbines-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}

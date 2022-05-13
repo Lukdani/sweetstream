@@ -1,0 +1,38 @@
+.custom-card {
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  border: 1px solid var(--mediumGray);
+}
+
+.custom-card.custom-card--noBorder {
+  border: 0;
+}
+
+.custom-card-header h3 {
+  padding: 1rem;
+  color: var(--dark) !important;
+  font-size: 1.75rem !important;
+}
+
+.custom-card-header.custom-card-header--reduced {
+  padding: 0.5rem 1rem;
+}
+
+.custom-card-header.custom-card-header--reduced h3 {
+  font-size: 1.5rem;
+}
+
+.custom-card-date {
+  padding: 1rem;
+  padding-bottom: 0;
+  display: inline-block;
+}
+
+.custom-card-header h3 {
+  margin: 0;
+}
+
+.custom-card-content {
+  padding: 1rem;
+  padding-top: 0;
+}

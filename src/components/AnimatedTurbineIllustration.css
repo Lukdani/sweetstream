@@ -1,0 +1,98 @@
+.animated-turbine-illustration-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Engine */
+.animated-turbine-illustration-container img {
+  position: absolute;
+}
+
+/* Wings container */
+.animated-turbine-illustration-wings {
+  top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Wings */
+.animated-turbine-illustration-wings img {
+  top: unset !important;
+}
+
+.animated-turbine-illustration-top {
+  z-index: 1;
+}
+
+.animated-turbine-illustration-pole {
+  z-index: 0;
+}
+
+.animated-turbine-illustration-grass {
+  height: 10px;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  transform: translatex(-50%);
+  z-index: 10;
+}
+
+.animated-turbine-illustration-grass div:nth-child(1) {
+  height: 10px;
+  width: 50px;
+  z-index: 1;
+}
+
+.animated-turbine-illustration-grass-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.animated-turbine-illustration-grass-items div {
+  background: rgb(112, 168, 84);
+  border-radius: 1rem 1rem 0 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.animated-turbine-illustration-grass div:nth-child(1) {
+  background: linear-gradient(
+    180deg,
+    rgba(112, 168, 84, 1) 5%,
+    rgba(99, 151, 73, 1) 90%
+  );
+  border-radius: 1rem 1rem 0.25rem 0.25rem;
+}
+
+.animated-turbine-illustration-grass-items div:nth-child(1) {
+  transform: translate(-50%, 0) rotate(-40deg);
+}
+
+.animated-turbine-illustration-grass-items div:nth-child(2) {
+  transform: rotate(-20deg);
+}
+
+.animated-turbine-illustration-grass-items div:nth-child(3) {
+  transform: translate(0, 0) rotate(0deg);
+}
+.animated-turbine-illustration-grass-items div:nth-child(4) {
+  transform: translate(50%, 0) rotate(20deg);
+}
+.animated-turbine-illustration-grass-items div:nth-child(5) {
+  transform: translate(50%, 0) rotate(40deg);
+}

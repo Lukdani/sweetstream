@@ -1,0 +1,37 @@
+.powered-by-container {
+  background-color: var(--white);
+}
+
+.powered-by-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.powered-by-content-container h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.powered-by-content-container img {
+  max-height: 4rem;
+  margin-left: 1rem;
+}
+
+.powered-by-images-container {
+  display: flex;
+  justify-content: center;
+}
+
+.powered-by-image {
+  display: block;
+  margin: auto;
+  max-height: 200px;
+}
+
+.powered-by-image {
+  display: block;
+  margin: auto;
+  max-height: 200px;
+}

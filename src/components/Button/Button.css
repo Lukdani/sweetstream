@@ -1,0 +1,28 @@
+.button {
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+.button:hover {
+  border-radius: 1rem;
+  transition: all ease-in 0.1s;
+}
+
+.button-primary {
+  background-color: var(--primary) !important;
+  border: 2px solid var(--primary);
+  color: var(--white) !important;
+}
+
+.button-secondary {
+  background-color: transparent !important;
+  border: 2px solid var(--primary) !important;
+}
+
+.button-secondary:not(.button--darkText) {
+  color: var(--white) !important;
+}
+
+.button .button--darkText {
+  color: var(--dark);
+}

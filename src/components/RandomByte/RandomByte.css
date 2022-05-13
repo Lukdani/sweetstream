@@ -1,0 +1,12 @@
+.randomByte {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.25);
+  font-family: monospace;
+  margin-bottom: 0;
+  animation: beat 2s ease-in-out infinite;
+}
+
+.randomByte.randomByte--lighten {
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}

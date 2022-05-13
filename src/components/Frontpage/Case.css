@@ -1,0 +1,20 @@
+.case-content.case-content--reduced {
+  max-height: 90px;
+  overflow: hidden;
+  position: relative;
+}
+
+.case-content.case-content--reduced::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+}

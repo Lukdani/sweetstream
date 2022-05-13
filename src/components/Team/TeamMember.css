@@ -1,0 +1,35 @@
+.team-member-container img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  animation: fadeIn 0.15s ease-in;
+}
+
+.team-member-container {
+  background-color: var(--white);
+  border: 1px solid var(--mediumGray);
+  padding: 2rem;
+  border-radius: 0.25rem;
+}
+
+.team-member-li-icon {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.team-member-li-icon:hover {
+  font-size: 2rem;
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.15s ease-in;
+  color: var(--primary);
+}
+
+.team-member-info-position {
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.team-member-info-roles {
+  font-size: 1.1rem;
+  color: var(--secondary);
+}

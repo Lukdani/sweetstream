@@ -1,0 +1,12 @@
+.features {
+  padding: 2rem 0;
+}
+
+.features h3 {
+  text-align: center;
+}
+
+.features p {
+  text-align: center;
+  font-size: 1.1rem;
+}

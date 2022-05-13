@@ -1,0 +1,141 @@
+.page-header {
+  color: var(--dark);
+  text-align: left;
+  margin-bottom: 1rem;
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+
+.page-header.page-header--sections {
+  margin-bottom: 0;
+}
+
+.page-header--imgEdition {
+}
+
+.page-header-container {
+  border-bottom: 1px solid var(--lightGray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.page-header-container--image {
+  position: relative;
+}
+
+.page-header-backgroundImage {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+.page-header-container--image img {
+  display: none !important;
+}
+
+.page-header-container--image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: var(--dark);
+}
+
+.page-header-container--image.page-header-container--image--alt::after {
+  background-color: var(--secondary);
+  opacity: 0.9;
+}
+
+.page-header img {
+  width: 100%;
+}
+
+.page-header-imgContainer {
+  position: relative;
+}
+
+.page-header-content {
+  line-height: 2.5rem;
+}
+.page-header-content div {
+  z-index: 1;
+}
+
+.page-header-sectionItem {
+  display: inline-block;
+  color: var(--light);
+  z-index: 1;
+  width: 100%;
+  animation: zoomOut 1s ease;
+}
+
+.page-header-sectionItem:nth-child(odd) p {
+  font-size: 2rem;
+}
+
+.page-header-sectionItem:nth-child(even) p {
+  font-size: 1.75rem;
+}
+
+.page-header p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  max-width: 70ch;
+}
+
+.page-header i {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+}
+
+.page-header .page-header--imgEdition h3 {
+  color: var(--);
+}
+
+/* HERO */
+.page-header.page-header--hero h3 {
+  color: var(--light);
+  z-index: 1;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* SECTIONS */
+
+.page-header--sections .page-header-header {
+  color: var(--light);
+}
+
+.page-header--sections .col-12:not(:last-of-type) .custom-card {
+  margin-bottom: 1rem;
+}
+
+.page-header.page-header--sections h4 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.page-header.page-header--sections h4 {
+  margin-top: 1.5rem;
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

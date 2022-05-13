@@ -1,0 +1,9 @@
+.get-started-form {
+  padding: 2rem;
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.get-started-form .group-group {
+  margin-bottom: 0.5rem;
+}
