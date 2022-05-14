@@ -35,16 +35,14 @@ body {
 }
 
 .hyperlink {
-  font-weight: bold;
+  font-size: 1.1rem;
   font-family: var(--header-font);
   text-decoration: none;
-  text-transform: uppercase;
-  color: var(--secondary);
+  color: rgb(20, 110, 190);
 }
 
 .hyperlink:hover {
-  text-decoration: underline;
-  color: var(--secondary);
+  color: #7eb4e5;
 }
 
 .white-bg {
@@ -123,4 +121,24 @@ body {
     width: unset !important;
     margin-right: 0;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--mediumGray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }

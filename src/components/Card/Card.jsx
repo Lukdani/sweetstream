@@ -1,12 +1,23 @@
+import { useMemo } from "react";
 import "./Card.css";
 
-const Card = ({ header, children, date, noBorder = false }) => {
+const Card = ({
+  header,
+  children,
+  date,
+  noBorder = false,
+  centerAlign = false,
+}) => {
+  const classes = useMemo(() => {
+    const rootClass = "custom-card";
+    let classes = rootClass;
+    if (noBorder) classes += ` ${rootClass + "--noBorder"}`;
+    if (centerAlign) classes += " text-center";
+    return classes;
+  }, [centerAlign, noBorder]);
+
   return (
-    <div
-      className={`${
-        noBorder ? "custom-card custom-card--noBorder" : "custom-card"
-      }`}
-    >
+    <div className={classes}>
       {date ? (
         <span className="custom-card-date text-muted">{date}</span>
       ) : null}

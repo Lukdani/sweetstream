@@ -2,6 +2,7 @@ import React, { useCallback, useMemo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../logo.png";
 import Button from "../Button/Button";
+import GetStartedButton from "../Button/GetStartedButton";
 import "./Navbar.css";
 
 const navLinks = [
@@ -34,13 +35,7 @@ const Navbar = ({ isDesktop }) => {
           </li>
         ))}
         <li>
-          <Link to="/get-started">
-            <Button
-              label="Get started"
-              classes="me-2"
-              color={isDesktop ? "primary" : "secondary"}
-            />
-          </Link>
+          <GetStartedButton color={isDesktop ? "primary" : "secondary"} />
         </li>
       </ul>
     ),

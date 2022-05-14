@@ -2,6 +2,9 @@ import StepItem from "./StepItem";
 import "./HowItWorks.css";
 import { useEffect, useRef } from "react";
 import PageHeader from "../PageHeader/PageHeader";
+import { Link } from "react-router-dom";
+import Button from "../Button/Button";
+import GetStartedButton from "../Button/GetStartedButton";
 
 const pageHeaderItems = {
   title: {
@@ -10,15 +13,17 @@ const pageHeaderItems = {
   },
   sections: [
     {
-      title: "What is it?",
+      title: "What does it do?",
       icon: "question-circle",
       text: (
         <span>
-          Sweet Stream is a solution to stream data from wind turbines. <br />
+          Sweet Stream reads data directly from turbines and transforms the data
+          into a format that can leverage the <strong>Kafka technology</strong>{" "}
+          .
           <br />
-          It works by reading the data directly from the turbines and
-          transforming the data into a format that can leverage the KAFKA
-          technology.
+          <br />
+          Once inside a Kafka cluster, the data can be transferred in accordance
+          with any <strong>security policy</strong> your organization uses.
         </span>
       ),
     },
@@ -27,13 +32,19 @@ const pageHeaderItems = {
       icon: "wrench",
       text: (
         <span>
-          The Sweet Stream Connector is installed on the turbines.
+          The first step is to install the Sweet Stream connector on your
+          infrastrucutre.
           <br />
-          The stream can now be read using the KAFKA technology.
+          <br />
+          The stream for the turbine can now be configurered - and you can read
+          from as many tags as you need.
           <br />
           <br />
-          Using the KAFKA technology, we can transfer data between security
-          zones.
+          Our{" "}
+          <Link className="hyperlink" to="/our-team">
+            consultants
+          </Link>{" "}
+          will assist your team with all configuration work.
         </span>
       ),
     },
@@ -87,13 +98,27 @@ const HowItWorks = ({ isDesktop }) => {
           <div className="row gy-2 text-center">
             <div className="col-12">
               <div>
-                <h3>Rough roadmap</h3>
+                <i
+                  className="fas fa-road"
+                  style={{ color: "var(--dark)", fontSize: "1.5rem" }}
+                ></i>
+                <h3>Roadmap</h3>
+                <p>
+                  The roadmap of course depends on your specific situation and
+                  infrastructure.
+                  <br />
+                  Below, however, is a rough sketch of the core steps in the
+                  implementation.
+                </p>
                 {items.map((item, index) => (
                   <div className="col-12 how-it-works-item-container">
                     <StepItem key={item.imageName} step={item} index={index} />
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="col-12">
+              <GetStartedButton />
             </div>
           </div>
         </div>

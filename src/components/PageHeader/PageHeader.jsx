@@ -41,6 +41,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
     <div
       ref={containerElement}
       style={{
+        position: "relative",
         minHeight:
           backgroundImages?.length > 0
             ? containerElement?.current?.getBoundingClientRect().width * 0.36
@@ -83,7 +84,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
                 })}
                 {ctaElement?.current ? (
                   <Button
-                    classes="mt-4"
+                    classes="mt-3"
                     label={cta.label}
                     onClick={() => ctaElement?.current?.scrollIntoView()}
                   >
@@ -92,7 +93,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
                 ) : null}
               </div>
               {imageName ? (
-                <div className="col-12 col-lg-6 offset-lg-1 page-header-imgContainer">
+                <div className="col-12 col-lg-6 offset-lg-1">
                   <img
                     src={`./images/${item.imageName}`}
                     alt={title.text}
@@ -119,7 +120,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
               <div className="page-header page-header--sections">
                 <div className="row">
                   <div
-                    className="col-12 col-lg-6"
+                    className="col-12 col-lg-5"
                     style={{ zIndex: "2", backgroundColor: "var(--white)" }}
                   >
                     <div className="row content-container">
@@ -141,7 +142,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
                             ))}
                             {ctaElement?.current ? (
                               <Button
-                                classes="mt-4"
+                                classes="mt-3"
                                 label={cta.label}
                                 onClick={() =>
                                   ctaElement?.current?.scrollIntoView()
@@ -156,12 +157,17 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
                     </div>
                   </div>
                   <div
-                    ref={pageHeaderElement}
-                    className="col-12 col-lg-6 p-0"
-                    style={{ position: "relative" }}
+                    ref={containerElement}
+                    className="col-12 offset-lg-1 col-lg-6 p-0"
                   >
-                    <div className="bytes">{randomBytes}</div>
-                    <img src={`./images/${imageName}`} alt="" />
+                    <div
+                      ref={containerElement}
+                      className="page-header-imgContainer"
+                      style={{ position: "relative" }}
+                    >
+                      <div className="bytes">{randomBytes}</div>
+                      <img src={`./images/${imageName}`} alt="" />
+                    </div>
                   </div>
                 </div>
               </div>

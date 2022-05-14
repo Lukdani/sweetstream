@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Feature from "./Feature";
 import "./Features.css";
 
@@ -42,9 +43,13 @@ const Features = () => {
         <p>
           Sweet Stream is a modern, scalable solution for streaming data from
           wind turbines.
-          <br />
-          <br />
-          Our expert team assists you from A-Z.
+        </p>
+        <p className="mt-0">
+          Our{" "}
+          <Link to="/our-team" target="_blank" className="hyperlink">
+            expert team
+          </Link>{" "}
+          assists you from A-Z.
         </p>
         {features.map((featureItem) => (
           <div

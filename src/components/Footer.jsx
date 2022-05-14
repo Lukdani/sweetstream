@@ -5,7 +5,7 @@ import SGLogo from "../sg-logo.png";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container-fluid">
+      <div className="container-lg">
         <div className="row content-container">
           <div className="col-12 col-lg-4">
             <h4>Contact</h4>

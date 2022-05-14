@@ -5,6 +5,7 @@ import { generateByte } from "../../utils/generateByte";
 import AnimatedTurbine from "../AnimatedTurbine";
 
 import Button from "../Button/Button";
+import GetStartedButton from "../Button/GetStartedButton";
 import "./Hero.css";
 
 const Hero = ({ isDesktop }) => {
@@ -62,9 +63,7 @@ const Hero = ({ isDesktop }) => {
               </div>
               <div className="row">
                 <div className="col">
-                  <Link to="/get-started">
-                    <Button label="Get started" classes="me-2" />
-                  </Link>
+                  <GetStartedButton />
                   <Button color="secondary" label="Read more" />
                 </div>
               </div>

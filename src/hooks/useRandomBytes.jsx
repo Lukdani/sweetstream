@@ -11,6 +11,7 @@ const useRandomBytes = (parentElement, isDesktop, lighten) => {
       const bytes = [...Array(isDesktop ? 30 : 15)].map((item, index) => {
         const randomTop = Math.random() * parentDimensions.height;
         const randomLeft = Math.random() * parentDimensions.width;
+        const byteText = generateByte();
 
         return (
           <RandomByte
@@ -18,7 +19,7 @@ const useRandomBytes = (parentElement, isDesktop, lighten) => {
             randomTop={randomTop}
             randomLeft={randomLeft}
             parentDimensions={parentDimensions}
-            byte={generateByte()}
+            byte={byteText}
             lighten={lighten}
           />
         );

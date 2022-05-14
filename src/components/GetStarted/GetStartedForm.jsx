@@ -25,7 +25,7 @@ const inputs = [
 const GetStartedForm = () => {
   return (
     <form className="get-started-form">
-      <h3>Let's get in touch</h3>
+      <h3 className="py-3">Let's get in touch</h3>
       {inputs.map((inputElement) => (
         <div className="mb-3">
           <label className="form-label" for={inputElement.name}>
@@ -41,7 +41,9 @@ const GetStartedForm = () => {
           />
         </div>
       ))}
-      <Button label={"Send"} color="primary" />
+      <Button label={"Send"} color="secondary" alt>
+        <i className="fas fa-paper-plane me-2"></i>
+      </Button>
     </form>
   );
 };

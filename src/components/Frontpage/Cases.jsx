@@ -71,7 +71,7 @@ const Cases = () => {
   return (
     <div className="container-lg">
       <div className="content-container">
-        <div className="row p-4">
+        <div className="row">
           <div className="col-12">
             <img
               className="cases-image"

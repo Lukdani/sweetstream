@@ -1,11 +1,13 @@
 import { useMemo } from "react";
 import "./Button.css";
 
-const colorClasses = (color, darkText) => {
+const colorClasses = (color, darkText, alt) => {
   let classes = darkText ? "button--darkText " : "";
   switch (color) {
     case "secondary":
-      classes += "button-secondary";
+      classes += alt
+        ? "button-secondary  button-secondary--alt"
+        : "button-secondary";
       break;
     default:
       classes += "button-primary";
@@ -17,14 +19,16 @@ const Button = ({
   onClick,
   label,
   color,
+  alt,
   classes = "",
   darkText = false,
   children,
   icon,
+  endIcon,
 }) => {
   const colorClass = useMemo(() => {
-    return colorClasses(color, darkText);
-  }, [color, darkText]);
+    return colorClasses(color, darkText, alt);
+  }, [alt, color, darkText]);
 
   return (
     <button
@@ -35,6 +39,7 @@ const Button = ({
       {children ? children : null}
       {icon ? <i className={`fa-solid fa-${icon} me-2`} /> : null}
       {label}
+      {endIcon ? endIcon : null}
     </button>
   );
 };

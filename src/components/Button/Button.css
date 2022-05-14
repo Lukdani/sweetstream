@@ -19,6 +19,10 @@
   border: 2px solid var(--primary) !important;
 }
 
+.button-secondary.button-secondary--alt {
+  border: 2px solid var(--secondary) !important;
+}
+
 .button-secondary:not(.button--darkText) {
   color: var(--white) !important;
 }

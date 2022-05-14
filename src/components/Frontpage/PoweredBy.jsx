@@ -15,9 +15,9 @@ const images = [
 const PoweredBy = () => {
   return (
     <div className="mediumGray-bg content-container">
-      <div className="container-lg powered-by-container">
-        <div className="content-container">
-          <div className="row  white-bg">
+      <div className="container-lg">
+        <div className="powered-by-container content-container">
+          <div className="row">
             <div className="col-12">
               <div>
                 <div className="powered-by-content-container mb-3">
