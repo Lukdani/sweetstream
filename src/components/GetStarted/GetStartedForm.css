@@ -7,3 +7,18 @@
 .get-started-form .group-group {
   margin-bottom: 0.5rem;
 }
+
+.get-started-receipt {
+  min-height: 436px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.get-started-receipt i {
+  color: var(--secondary);
+  margin-left: 1rem;
+}

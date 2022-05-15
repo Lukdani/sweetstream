@@ -142,3 +142,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
+
+.input-invalid {
+  color: #ffff56;
+}
+
+.form-label.custom-form-label {
+  display: flex;
+  justify-content: space-between;
+}
