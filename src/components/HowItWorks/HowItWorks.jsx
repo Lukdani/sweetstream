@@ -17,9 +17,8 @@ const pageHeaderItems = {
       icon: "question-circle",
       text: (
         <span>
-          Sweet Stream reads data directly from turbines and transforms the data
-          into a format that can leverage the <strong>Kafka technology</strong>{" "}
-          .
+          Sweet Stream transforms data from turbines into a format that can
+          leverage the <strong>Kafka technology</strong>.
           <br />
           <br />
           Once inside a Kafka cluster, the data can be transferred in accordance
@@ -36,8 +35,8 @@ const pageHeaderItems = {
           infrastrucutre.
           <br />
           <br />
-          The stream for the turbine can now be configurered - and you can read
-          from as many tags as you need.
+          The stream can now be configurered - and you can read from as many
+          tags as you want.
           <br />
           <br />
           Our{" "}

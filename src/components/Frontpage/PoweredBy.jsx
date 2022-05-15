@@ -53,7 +53,7 @@ const PoweredBy = () => {
                   >
                     Sweet Geeks{" "}
                   </a>
-                  has a mission to assist the energy sector reach their goals.
+                  has a mission to assist the energy sector reach its goals.
                 </p>
                 <div className="row">
                   <div className="col-12 powered-by-images-container">
