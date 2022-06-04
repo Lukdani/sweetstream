@@ -30,3 +30,8 @@
 .button .button--darkText {
   color: var(--dark);
 }
+
+.btn--preIcon {
+  color: var(--secondary);
+  margin-right: 0.5rem;
+}

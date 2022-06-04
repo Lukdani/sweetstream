@@ -10,12 +10,13 @@
 }
 
 .powered-by-content-container h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 0;
+  color: var(--dark);
 }
 
 .powered-by-content-container img {
-  max-height: 4rem;
+  max-height: 120px;
   margin-left: 1rem;
 }
 

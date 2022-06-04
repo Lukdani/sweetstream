@@ -11,6 +11,16 @@
   margin-bottom: 0;
 }
 
+.page-header.page-header--sections .page-header-title {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.page-header.page-header--sections .page-header-title i {
+  color: var(--primary);
+  animation: rotate 4s linear infinite;
+}
+
 .page-header--imgEdition {
 }
 
@@ -78,14 +88,7 @@
   z-index: 1;
   width: 100%;
   animation: zoomOut 1s ease;
-}
-
-.page-header-sectionItem:nth-child(odd) p {
   font-size: 2rem;
-}
-
-.page-header-sectionItem:nth-child(even) p {
-  font-size: 1.75rem;
 }
 
 .page-header p {
@@ -106,9 +109,9 @@
 /* HERO */
 .page-header.page-header--hero h3 {
   color: var(--light);
+  animation: fadeIn 0.5s ease-in;
   z-index: 1;
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 2rem;
   margin-bottom: 0;
 }
 
@@ -125,15 +128,16 @@
 .page-header.page-header--sections h4 {
   font-size: 1.25rem;
   color: var(--primary);
+
   animation: fadeIn 0.5s ease-in;
 }
 
 .page-header.page-header--sections h4 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .page-header.page-header--sections h4:first-of-type {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 @keyframes zoomOut {

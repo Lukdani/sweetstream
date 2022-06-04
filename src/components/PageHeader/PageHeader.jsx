@@ -23,7 +23,6 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
   }, []);
 
   const setNewIndex = useCallback(() => {
-    console.log("test test");
     setImageUrlIndex((prevIndex) =>
       prevIndex >= backgroundImages?.length - 1 ? 0 : prevIndex + 1
     );
@@ -125,34 +124,31 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
                   >
                     <div className="row content-container">
                       <div className="col-12">
-                        <Card
-                          header={title.text}
-                          style={{ zIndex: "2" }}
-                          noBorder={true}
-                        >
+                        <h4 className="page-header-title">
+                          {title.text}
+                          <i className={`fas fa-${title.icon} ms-3`} />
+                        </h4>
+
+                        {sections.map((sectionItem) => (
                           <>
-                            {sections.map((sectionItem) => (
-                              <>
-                                <h4>
-                                  {/*<i className={`fas fa-${sectionItem.icon}`} />*/}
-                                  {sectionItem.title}
-                                </h4>
-                                <p>{sectionItem.text}</p>
-                              </>
-                            ))}
-                            {ctaElement?.current ? (
-                              <Button
-                                classes="mt-3"
-                                label={cta.label}
-                                onClick={() =>
-                                  ctaElement?.current?.scrollIntoView()
-                                }
-                              >
-                                <i className="fas fa-arrow-down"></i>
-                              </Button>
-                            ) : null}
+                            <h4>
+                              {/*<i className={`fas fa-${sectionItem.icon}`} />*/}
+                              {sectionItem.title}
+                            </h4>
+                            <p>{sectionItem.text}</p>
                           </>
-                        </Card>
+                        ))}
+                        {ctaElement?.current ? (
+                          <Button
+                            classes="mt-3"
+                            label={cta.label}
+                            onClick={() =>
+                              ctaElement?.current?.scrollIntoView()
+                            }
+                          >
+                            <i className="fas fa-arrow-down"></i>
+                          </Button>
+                        ) : null}
                       </div>
                     </div>
                   </div>

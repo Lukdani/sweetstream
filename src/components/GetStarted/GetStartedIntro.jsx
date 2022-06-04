@@ -4,10 +4,11 @@ import Photo from "../../bdh_profile.png";
 
 const GetStartedIntro = () => {
   return (
-    <Card header="Get started" noBorder centerAlign>
+    <Card header="Get started" noBorder alternate>
       <div className="get-started-intro">
         <h4>
-          "We are experienced in implementing our solution in{" "}
+          <i className="fas fa-quote-left get-started-quoteIcon"></i>
+          We are experienced in implementing our solution in{" "}
           <strong>industry scale</strong> parks.
           <br />
           <br />
@@ -16,10 +17,12 @@ const GetStartedIntro = () => {
           <strong>security policies</strong>.
           <br />
           <br />
-          Let's take a non-obligation talk about your current situation."
+          Let's take a non-obligation talk about your current situation.
         </h4>
         <p className="mt-4">
-          - <em>Brian Heilskov</em>, Project Manager and co-founder
+          Brian Heilskov
+          <br />
+          <small className="get-started-title"> Project Manager and co-founder</small>
         </p>
         <img className="get-started-photo" src={Photo} alt="" />
       </div>

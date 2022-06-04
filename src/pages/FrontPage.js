@@ -16,7 +16,7 @@ const FrontPage = ({ isDesktop }) => {
       <Features />
       <PitchLine />
       <PoweredBy />
-      <Cases />
+      <Cases isDesktop={isDesktop} />
     </div>
   );
 };

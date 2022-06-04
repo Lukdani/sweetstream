@@ -5,6 +5,7 @@ const cases = [
   {
     header: "1000 turbines",
     year: 2021,
+    imageName: "1000_turbines.png",
     content: (
       <p>
         The client operated 1000 turbines placed on 12 different farms.
@@ -33,6 +34,7 @@ const cases = [
   },
   {
     header: "Legacy data",
+    imageName: "windmill.png",
     year: 2021,
     content: (
       <p>
@@ -47,7 +49,7 @@ const cases = [
         security zone model.
       </p>
     ),
-  },
+  } /*
   {
     header: "Redudancy",
     year: 2021,
@@ -64,27 +66,22 @@ const cases = [
         security zone model.
       </p>
     ),
-  },
+  },*/,
 ];
 
-const Cases = () => {
+const Cases = ({ isDesktop }) => {
   return (
     <div className="container-lg">
       <div className="content-container">
         <div className="row">
           <div className="col-12">
-            <img
-              className="cases-image"
-              src="./images/turbine_illustration.png"
-              alt=""
-            />
             <h2 className="text-center mb-4 mt-2">Solved cases</h2>
           </div>
           <div className="col-12">
             <div className="row g-4">
               {cases.map((caseItem, index) => (
                 <div key={`case-${index}`} className="col-12 col-lg-6">
-                  <Case caseItem={caseItem} />
+                  <Case caseItem={caseItem} isDesktop={isDesktop} />
                 </div>
               ))}
             </div>

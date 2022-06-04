@@ -5,18 +5,13 @@ import { useRef } from "react";
 const pageHeaderItems = {
   title: {
     icon: "people-group",
-    text: "A team",
+    text: "Get the best experts",
   },
   sections: [
     {
       title: "Complete team",
       icon: "certificate",
-      text: "with the capabilities and experience",
-    },
-    {
-      title: "Transfer of knowledge",
-      icon: "comments",
-      text: "To help you succeed",
+      text: "on your team",
     },
   ],
   imageName: "sg_1.png",

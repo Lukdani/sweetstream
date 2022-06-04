@@ -7,7 +7,7 @@ const PitchLine = () => {
     <div className="container-fluid">
       <div className="row pitchLine content-container">
         <div className="col-12">
-          <i className="fa-solid fa-tags mb-2"></i>
+          <i className="pitchLine-icon fa-solid fa-tags mb-2"></i>
           <h2>Gather from endless tags</h2>
           <p>
             Gather data from all tags with very limitied margin cost.

@@ -1,8 +1,13 @@
 .feature {
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 2rem;
-  text-align: center;
+  text-align: left;
   height: 100%;
+  color: var(--dark);
+}
+
+.feature p {
+  text-align: left !important;
 }
 
 .feature:hover {
@@ -11,16 +16,18 @@
 }
 
 .feature-container:nth-of-type(even) .feature {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(255, 255, 255, .95);
 }
 
 .feature i {
-  font-size: 1.5rem;
-  color: var(--primary);
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
 }
 
 .feature h4 {
   margin: 0.75rem 0;
+  font-size: 1.75rem;
 }
 
 .feature p {

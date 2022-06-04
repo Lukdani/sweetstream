@@ -1,5 +1,5 @@
 .pitchLine {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: var(--light);
   text-align: center;
   font-size: 1.1rem;
@@ -7,6 +7,8 @@
 
 .pitchLine i {
   font-size: 2rem;
+  color: var(--accent);
+  animation: rotate 4s linear infinite;
 }
 
 .pitchLine-turbines-container {

@@ -4,6 +4,15 @@
   border: 1px solid var(--mediumGray);
 }
 
+.custom-card.custom-card--alt{
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.custom-card-imageHeader {
+  max-width: 100%;
+}
+
 .custom-card.custom-card--noBorder {
   border: 0;
 }
@@ -14,8 +23,8 @@
   font-size: 1.75rem !important;
 }
 
-.custom-card-header.custom-card-header--reduced {
-  padding: 0.5rem 1rem;
+.custom-card.custom-card--alt .custom-card-header h3 {
+  color: var(--light) !important;
 }
 
 .custom-card-header.custom-card-header--reduced h3 {

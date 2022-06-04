@@ -1,12 +1,26 @@
 .features {
   padding: 2rem 0;
+  color: var(--dark);
 }
 
 .features h3 {
-  text-align: center;
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.features-header {
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.features h3 i {
+  color: var(--accent);
+  animation: rotate 4s linear infinite;
 }
 
 .features p {
-  text-align: center;
+  text-align: left;
   font-size: 1.1rem;
 }

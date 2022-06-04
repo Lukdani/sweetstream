@@ -4,13 +4,16 @@ const useIsDesktop = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  const handleWidthChange = useCallback(() => {
-    setWidth(window.innerWidth);
-    setIsDesktop(width >= 992);
-  }, [width]);
+  const handleWidthChange = useCallback(
+    (windowWidth) => {
+      setWidth(windowWidth);
+      setIsDesktop(width >= 992);
+    },
+    [width]
+  );
 
   useEffect(() => {
-    handleWidthChange();
+    handleWidthChange(window.innerWidth);
     window.addEventListener("resize", handleWidthChange);
     return () => window.removeEventListener("resize", handleWidthChange);
   }, [handleWidthChange]);

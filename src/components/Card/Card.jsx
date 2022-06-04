@@ -7,12 +7,14 @@ const Card = ({
   date,
   noBorder = false,
   centerAlign = false,
+  alternate,
 }) => {
   const classes = useMemo(() => {
     const rootClass = "custom-card";
     let classes = rootClass;
     if (noBorder) classes += ` ${rootClass + "--noBorder"}`;
     if (centerAlign) classes += " text-center";
+    if (alternate) classes += " custom-card--alt"
     return classes;
   }, [centerAlign, noBorder]);
 

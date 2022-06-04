@@ -17,12 +17,10 @@ const pageHeaderItems = {
       icon: "question-circle",
       text: (
         <span>
-          Sweet Stream transforms data from turbines into a format that can
-          leverage the <strong>Kafka technology</strong>.
+          Sweet Stream acquires and transforms data from turbines and pushes it into a <strong>Kafka cluster</strong>.
           <br />
           <br />
-          Once inside a Kafka cluster, the data can be transferred in accordance
-          with any <strong>security policy</strong> your organization uses.
+          Sweet Stream - together with the Kafka platform - fully supports the zone model of Industrial Control Systems <strong>(ISA/IEC 62443)</strong>.
         </span>
       ),
     },
@@ -31,12 +29,10 @@ const pageHeaderItems = {
       icon: "wrench",
       text: (
         <span>
-          The first step is to install the Sweet Stream connector on your
-          infrastrucutre.
-          <br />
-          <br />
-          The stream can now be configurered - and you can read from as many
-          tags as you want.
+         The first step is to install the Sweet Stream connector on your edge infrastructure.
+         <br/>
+         <br/>
+The stream can now be configured - and you can read from as many data sources and tags as you want.
           <br />
           <br />
           Our{" "}
@@ -55,20 +51,20 @@ const pageHeaderItems = {
 
 const items = [
   {
-    header: "Install connector",
-    text: "Install the Sweet Stream connector on turbines. \\n It will receive data from any industri standard protocol and transform it into a format that can be streamed with the KAFKA technology. \\n The software is very light weight and can be installed and virtually any device, old as new, powerful or not.",
+    header: "Install the connector",
+    text: "Install the Sweet Stream connector on your edge infrastructure.\\n It will acquire data from any industry standard protocol and push it into a Kafka cluster. \\n The software is designed as a zero-footprint component (very light weight) and can be installed on virtually any device, old as new, powerful or not",
     imageName: "geek_tool.png",
     imageNameAlt: "geek_tool_2.png",
   },
   {
     header: "Configure data center",
-    text: "You're now ready to receive the data through the KAFKA technology. \\n We'll work with your development team to set it up in any kind of security model you're using, such as zone models. \\n Configure it all from the comfort of your offices.",
+    text: "Once the connector is ready, we will install a Kafka cluster and set up a topic to get the data. \\n If you already have Kafka cluster, we can simply add a topic for the data here. \\nIn this process, there will be some network configuration as well. Our team will support you on this part as well. \\n Configure it all from the comfort of your offices.",
     imageName: "geek_keyboard.png",
     imageNameAlt: "geek_keyboard_2.png",
   },
   {
     header: "Read from anywhere",
-    text: "You can now read data from anywhere - from the surveillance center to the board room - while having complied with all security policies and standards. \\n Read data as time series and even compare with historic data.",
+    text: "You can now stream the data to any destination – to the surveillance center, your SCADA system, to the board room’s KPI visualization software (e.g Microsoft PowerBI)  - while having complied with all security policies and standards.",
     imageName: "geek_monitor.png",
     imageNameAlt: "geek_monitor_2.png",
   },
