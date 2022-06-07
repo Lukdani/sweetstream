@@ -1,13 +1,14 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import useRandomBytes from "../../hooks/useRandomBytes";
 import Button from "../Button/Button";
-import Card from "../Card/Card";
 import "./PageHeader.css";
 
 const PageHeader = ({ item, isDesktop, ctaElement }) => {
-  const { title, sections, imageName, backgroundImages, cta } = item;
+  const { title, sections, imageName, backgroundImages, cta, videoName } = item;
   const pageHeaderElement = useRef(null);
   const containerElement = useRef(null);
+  const videoElement = useRef(null);
+  const sourceElement = useRef(null);
   const { randomBytes } = useRandomBytes(
     containerElement,
     isDesktop,
@@ -35,25 +36,36 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
     return () => clearInterval(imageChanger);
   }, [setNewIndex]);
 
+  useEffect(() => {
+    videoElement.current?.pause();
+    sourceElement.current?.setAttribute(
+      "src",
+      `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
+    );
+    videoElement.current?.load();
+    videoElement.current?.play();
+  }, [isDesktop, videoName]);
+
   const sectionContainer = useRef(null);
-  return backgroundImages?.length > 0 ? (
+  return backgroundImages?.length > 0 || videoName ? (
     <div
       ref={containerElement}
       style={{
         position: "relative",
         minHeight:
-          backgroundImages?.length > 0
-            ? containerElement?.current?.getBoundingClientRect().width * 0.36
+          backgroundImages?.length > 0 || videoName
+            ? containerElement?.current?.getBoundingClientRect().width * 0.35
             : null,
       }}
       className={
-        backgroundImages?.length > 0
+        backgroundImages?.length > 0 || videoName
           ? "page-header-container page-header-container--image"
           : "page-header-container secondary-bg"
       }
     >
       {backgroundImages?.map((backgroundImageItem, index) => (
         <div
+          key={backgroundImageItem}
           style={{
             opacity: index === imageUrlIndex ? 1 : 0,
             backgroundImage: `url(./images/backgrounds/${backgroundImageItem})`,
@@ -61,6 +73,13 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
           className="page-header-backgroundImage"
         />
       ))}
+      {videoName ? (
+        <div className="page-header-backgroundImage">
+          <video ref={videoElement} muted loop id="heroVideo">
+            <source ref={sourceElement} type="video/mp4" />
+          </video>
+        </div>
+      ) : null}
       <div ref={pageHeaderElement} className="page-header page-header--hero">
         <div className="bytes">{randomBytes}</div>
         <div className="page-header-content">
@@ -130,13 +149,13 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
                         </h4>
 
                         {sections.map((sectionItem) => (
-                          <>
+                          <span key={sectionItem.title}>
                             <h4>
                               {/*<i className={`fas fa-${sectionItem.icon}`} />*/}
                               {sectionItem.title}
                             </h4>
                             <p>{sectionItem.text}</p>
-                          </>
+                          </span>
                         ))}
                         {ctaElement?.current ? (
                           <Button

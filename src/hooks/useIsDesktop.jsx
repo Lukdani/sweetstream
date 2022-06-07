@@ -1,15 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
 
 const useIsDesktop = () => {
-  const [width, setWidth] = useState(window.innerWidth);
   const [isDesktop, setIsDesktop] = useState(false);
 
   const handleWidthChange = useCallback(
     (windowWidth) => {
-      setWidth(windowWidth);
-      setIsDesktop(width >= 992);
+      const isNowDesktop = windowWidth >= 992;
+      if (isDesktop !== isNowDesktop) {
+        setIsDesktop(isNowDesktop);
+      }
     },
-    [width]
+    [isDesktop]
   );
 
   useEffect(() => {

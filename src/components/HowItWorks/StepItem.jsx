@@ -85,7 +85,7 @@ const StepItem = ({ step, index }) => {
             <h4>{header}</h4>
             <p>
               {text.split("\\n").map((textItem, index) => (
-                <>
+                <span key={textItem}>
                   {textItem}
                   {index < text.split("\\n").length - 1 ? (
                     <>
@@ -93,7 +93,7 @@ const StepItem = ({ step, index }) => {
                       <br />
                     </>
                   ) : null}
-                </>
+                </span>
               ))}
             </p>
             {index === 2 ? null : (

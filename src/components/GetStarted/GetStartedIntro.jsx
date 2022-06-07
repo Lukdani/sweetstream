@@ -17,12 +17,15 @@ const GetStartedIntro = () => {
           <strong>security policies</strong>.
           <br />
           <br />
-          Let's take a non-obligation talk about your current situation.
+          Let's have a non-obligating talk about your current situation.
         </h4>
         <p className="mt-4">
-          Brian Heilskov
+          <strong>Brian Heilskov</strong>
           <br />
-          <small className="get-started-title"> Project Manager and co-founder</small>
+          <small className="get-started-title">
+            {" "}
+            Project Manager and co-founder
+          </small>
         </p>
         <img className="get-started-photo" src={Photo} alt="" />
       </div>

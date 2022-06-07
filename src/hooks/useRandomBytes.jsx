@@ -15,6 +15,7 @@ const useRandomBytes = (parentElement, isDesktop, lighten) => {
 
         return (
           <RandomByte
+            key={`randomByte-${byteText}-${index}`}
             index={index}
             randomTop={randomTop}
             randomLeft={randomLeft}

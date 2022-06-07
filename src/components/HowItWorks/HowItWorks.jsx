@@ -17,10 +17,13 @@ const pageHeaderItems = {
       icon: "question-circle",
       text: (
         <span>
-          Sweet Stream acquires and transforms data from turbines and pushes it into a <strong>Kafka cluster</strong>.
+          Sweet Stream acquires and transforms data from turbines and pushes it
+          into a <strong>Kafka cluster</strong>.
           <br />
           <br />
-          Sweet Stream - together with the Kafka platform - fully supports the zone model of Industrial Control Systems <strong>(ISA/IEC 62443)</strong>.
+          Sweet Stream - together with the Kafka platform - fully supports the
+          zone model of Industrial Control Systems{" "}
+          <strong>(ISA/IEC 62443)</strong>.
         </span>
       ),
     },
@@ -29,10 +32,12 @@ const pageHeaderItems = {
       icon: "wrench",
       text: (
         <span>
-         The first step is to install the Sweet Stream connector on your edge infrastructure.
-         <br/>
-         <br/>
-The stream can now be configured - and you can read from as many data sources and tags as you want.
+          The first step is to install the Sweet Stream connector on your edge
+          infrastructure.
+          <br />
+          <br />
+          The stream can now be configured - and you can read from as many data
+          sources and tags as you want.
           <br />
           <br />
           Our{" "}
@@ -106,8 +111,11 @@ const HowItWorks = ({ isDesktop }) => {
                   implementation.
                 </p>
                 {items.map((item, index) => (
-                  <div className="col-12 how-it-works-item-container">
-                    <StepItem key={item.imageName} step={item} index={index} />
+                  <div
+                    key={item.imageName}
+                    className="col-12 how-it-works-item-container"
+                  >
+                    <StepItem step={item} index={index} />
                   </div>
                 ))}
               </div>

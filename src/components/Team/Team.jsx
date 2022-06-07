@@ -1,6 +1,9 @@
 import TeamMember from "./TeamMember";
 import PageHeader from "../PageHeader/PageHeader";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import useApiGet from "../../utils/useApiGet";
+
+const getRequest = "getEmployees";
 
 const pageHeaderItems = {
   title: {
@@ -89,6 +92,12 @@ const team = [
 
 const Team = () => {
   const element = useRef();
+  const { data, fetchData } = useApiGet({ url: getRequest });
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
     <>
       <PageHeader item={pageHeaderItems} ctaElement={element} />
@@ -97,12 +106,23 @@ const Team = () => {
         style={{ scrollMarginTop: "var(--navbar-height)" }}
         className="container-lg content-container"
       >
-        <div className="row g-4">
-          {team.map((teamMember) => (
-            <div className="col-12 col-lg-6">
-              <TeamMember teamMember={teamMember} />
+        <div className="row">
+          <div className="col-12 col-lg-5">
+            <h4>The team</h4>
+            <p>
+              Our team will work closely with your organisation throughout the
+              implementation process - from start to end.
+            </p>
+          </div>
+          <div className="col-12">
+            <div className="row  g-4">
+              {data?.map((teamMember) => (
+                <div className="col-12 col-lg-6">
+                  <TeamMember teamMember={teamMember} />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
         <div className="content-container"></div>
       </div>

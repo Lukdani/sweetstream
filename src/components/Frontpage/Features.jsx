@@ -80,15 +80,17 @@ const Features = () => {
             </Button>
           </div>
           <div ref={vidoeContainer} className="col-12 offset-lg-1 col-lg-5">
-            <iframe
-              width={videoContainerWidth}
-              height={videoContainerWidth * 0.5625}
-              src="https://www.youtube.com/embed/NXQSVozKSNU"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            {videoContainerWidth ? (
+              <iframe
+                width={videoContainerWidth}
+                height={videoContainerWidth * 0.5625}
+                src="https://www.youtube.com/embed/NXQSVozKSNU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : null}
           </div>
           <h4
             className="features-header"

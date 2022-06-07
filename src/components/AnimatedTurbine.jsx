@@ -74,7 +74,9 @@ const AnimatedTurbine = ({
               transformOrigin: `${scale / 60}px ${
                 scale * 0.35 + scale / 40 - scale / 80
               }px`,
-              transform: rotateOnScroll ? `rotateZ(${offset}deg)` : null,
+              transform: rotateOnScroll
+                ? `rotateZ(${offset === undefined ? "180" : offset}deg)`
+                : null,
             }}
           >
             <div

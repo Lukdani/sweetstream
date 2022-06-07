@@ -4,6 +4,7 @@ import Features from "../components/Frontpage/Features";
 import Hero from "../components/Frontpage/Hero";
 import PitchLine from "../components/Frontpage/PitchLine";
 import PoweredBy from "../components/Frontpage/PoweredBy";
+import VideoHeader from "../components/VideoHeader/VideoHeader";
 
 const FrontPage = ({ isDesktop }) => {
   useEffect(() => {
@@ -16,7 +17,13 @@ const FrontPage = ({ isDesktop }) => {
       <Features />
       <PitchLine />
       <PoweredBy />
-      <Cases isDesktop={isDesktop} />
+      <VideoHeader
+        isDesktop={isDesktop}
+        videoName="hero"
+        text="Case we have solved"
+        ctaLink="/solved-cases"
+        ctaLabel="View cases"
+      />
     </div>
   );
 };

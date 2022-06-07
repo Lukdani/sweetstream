@@ -11,10 +11,13 @@ const navLinks = [
     label: "How it works",
   },
   {
+    path: "solved-cases",
+    label: "Solved cases",
+  },
+  {
     path: "our-team",
     label: "Our team",
   },
-  { path: "contact", label: "Contact" },
 ];
 
 const Navbar = ({ isDesktop }) => {
@@ -29,7 +32,13 @@ const Navbar = ({ isDesktop }) => {
       <ul>
         {navLinks.map((navItem) => (
           <li key={navItem.path}>
-            <NavLink className="navbar-link" to={`/${navItem.path}`}>
+            <NavLink
+              className="navbar-link"
+              to={`/${navItem.path}`}
+              onClick={() => {
+                if (isDesktop) toggleShowNav(!showNav);
+              }}
+            >
               {navItem.label}
             </NavLink>
           </li>

@@ -11,6 +11,7 @@ import HowItWorks from "./components/HowItWorks/HowItWorks";
 import Team from "./components/Team/Team";
 import useIsDesktop from "./hooks/useIsDesktop";
 import { createBrowserHistory } from "history";
+import Cases from "./components/Frontpage/Cases";
 
 export const history = createBrowserHistory({
   basename: process.env.PUBLIC_URL,
@@ -38,6 +39,10 @@ function App() {
               element={<HowItWorks isDesktop={isDesktop} />}
             />
             <Route path="get-started" element={<GetStarted />} />
+            <Route
+              path="solved-cases"
+              element={<Cases isDesktop={isDesktop} />}
+            />
           </Routes>
         </main>
       </BrowserRouter>

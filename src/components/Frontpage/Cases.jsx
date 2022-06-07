@@ -1,6 +1,23 @@
+import { useRef } from "react";
+import PageHeader from "../PageHeader/PageHeader";
 import Case from "./Case";
 import "./Cases.css";
 
+const pageHeaderItems = {
+  title: {
+    icon: "people-group",
+    text: "We are experienced",
+  },
+  sections: [
+    {
+      title: "Complete team",
+      icon: "certificate",
+      text: "in the wind domain",
+    },
+  ],
+  videoName: "hero",
+  cta: { label: "Solved cases" },
+};
 const cases = [
   {
     header: "1000 turbines",
@@ -70,25 +87,43 @@ const cases = [
 ];
 
 const Cases = ({ isDesktop }) => {
+  console.log(isDesktop);
+  const element = useRef();
   return (
-    <div className="container-lg">
-      <div className="content-container">
-        <div className="row">
-          <div className="col-12">
-            <h2 className="text-center mb-4 mt-2">Solved cases</h2>
-          </div>
-          <div className="col-12">
-            <div className="row g-4">
-              {cases.map((caseItem, index) => (
-                <div key={`case-${index}`} className="col-12 col-lg-6">
-                  <Case caseItem={caseItem} isDesktop={isDesktop} />
-                </div>
-              ))}
+    <>
+      <PageHeader
+        item={pageHeaderItems}
+        ctaElement={element}
+        isDesktop={isDesktop}
+      />
+
+      <div
+        ref={element}
+        style={{ scrollMarginTop: "var(--navbar-height)" }}
+        className="container-lg"
+      >
+        <div className="content-container">
+          <div className="row">
+            <div className="col-12">
+              <h4>Solved cases</h4>
+              <p className="mb-4 mt-2">
+                We have implemented the solution several times. <br /> Below
+                you'll read some of the special obstacles, we have overcome.
+              </p>
+            </div>
+            <div className="col-12">
+              <div className="row g-4">
+                {cases.map((caseItem, index) => (
+                  <div key={`case-${index}`} className="col-12 col-lg-6">
+                    <Case caseItem={caseItem} isDesktop={isDesktop} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

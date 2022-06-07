@@ -4,6 +4,16 @@
   color: var(--light);
 }
 
+.get-started-form h3 {
+  padding: 1rem 0;
+}
+
+.get-started-form h3 i {
+  margin-left: 0.5rem;
+  color: var(--accent);
+  animation: rotate 4s linear infinite;
+}
+
 .get-started-form .group-group {
   margin-bottom: 0.5rem;
 }

@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
 
 const fullUrl = (url, queryParams) =>
-  `http://localhost:8888/sweetstream_backend/api/${url}.php${
-    queryParams ? `?${queryParams}` : null
+  `${process.env.REACT_APP_API_URL}api/${url}.php${
+    queryParams ? `?${queryParams}` : ""
   }`;
 
 const useApiGet = ({ url }) => {

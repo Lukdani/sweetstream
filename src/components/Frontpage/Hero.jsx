@@ -9,8 +9,7 @@ import "./Hero.css";
 
 const Hero = ({ isDesktop }) => {
   const heroRef = useRef(null);
-  const videoElement = useRef(null);
-  const sourceElement = useRef(null);
+
   const { randomBytes, createRandomBytes } = useRandomBytes(heroRef, isDesktop);
   const elementRef = useRef(null);
 
@@ -42,24 +41,11 @@ const Hero = ({ isDesktop }) => {
       window.removeEventListener("resize", onResize);
       clearInterval(byteInterval);
     };
-  }, [createRandomBytes, setScale]);
-
-  useEffect(() => {
-    videoElement.current?.pause();
-    sourceElement.current.setAttribute(
-      "src",
-      `./videos/hero_${isDesktop ? "desktop" : "mobile"}.mp4`
-    );
-    videoElement.current?.load();
-    videoElement.current?.play();
-  }, [isDesktop]);
+  }, [createRandomBytes, isDesktop, setScale]);
 
   return (
     <div ref={heroRef} className="hero">
       <div className="bytes">{randomBytes}</div>
-      <video ref={videoElement} autoPlay muted loop id="heroVideo">
-        <source ref={sourceElement} src="" type="video/mp4" />
-      </video>
       <div className="container-lg">
         <div className="row">
           <div className="col-lg-4 col-12">

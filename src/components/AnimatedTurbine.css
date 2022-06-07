@@ -62,11 +62,11 @@
 }
 
 .animated-turbine-wing-container.animated-turbine-wing-container--animateOnScroll {
-  animation: rotateAnimation 1s infinite linear;
+  animation: rotateAnimation 1s linear;
 }
 
 .animated-turbine-wing-container.animated-turbine-wing-container--animationDisabled {
-  animation-play-state: paused;
+  animation: rotateAnimation 1.5s ease-in-out;
 }
 
 .animated-turbine-wing {

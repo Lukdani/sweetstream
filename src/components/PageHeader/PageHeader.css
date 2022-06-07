@@ -7,6 +7,10 @@
   flex: 1;
 }
 
+.page-header-container video {
+  max-width: 100%;
+}
+
 .page-header.page-header--sections {
   margin-bottom: 0;
 }
@@ -88,7 +92,7 @@
   z-index: 1;
   width: 100%;
   animation: zoomOut 1s ease;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .page-header p {
@@ -111,7 +115,7 @@
   color: var(--light);
   animation: fadeIn 0.5s ease-in;
   z-index: 1;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
 }
 
