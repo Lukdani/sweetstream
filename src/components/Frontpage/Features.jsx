@@ -37,7 +37,7 @@ const features = [
   },
 ];
 
-const Features = () => {
+const Features = ({ isDesktop }) => {
   const vidoeContainer = useRef(null);
   const [videoContainerWidth, setVideoContainerWidth] = useState();
   const element = useRef(null);
@@ -45,7 +45,7 @@ const Features = () => {
 
   useEffect(() => {
     setVideoContainerWidth(vidoeContainer.current?.offsetWidth);
-  }, []);
+  }, [isDesktop]);
 
   return (
     <div
@@ -79,18 +79,20 @@ const Features = () => {
               <i className="fas fa-arrow-down btn--preIcon"></i>
             </Button>
           </div>
-          <div ref={vidoeContainer} className="col-12 offset-lg-1 col-lg-5">
-            {videoContainerWidth ? (
-              <iframe
-                width={videoContainerWidth}
-                height={videoContainerWidth * 0.5625}
-                src="https://www.youtube.com/embed/NXQSVozKSNU"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            ) : null}
+          <div className="col-12 offset-lg-1 col-lg-5">
+            <div ref={vidoeContainer}>
+              {videoContainerWidth ? (
+                <iframe
+                  width={videoContainerWidth}
+                  height={videoContainerWidth * 0.5625}
+                  src="https://www.youtube.com/embed/NXQSVozKSNU"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : null}
+            </div>
           </div>
           <h4
             className="features-header"

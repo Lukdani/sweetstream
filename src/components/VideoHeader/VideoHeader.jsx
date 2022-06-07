@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./VideoHeader.css";
@@ -6,16 +6,17 @@ import "./VideoHeader.css";
 const VideoHeader = ({ isDesktop, videoName, text, ctaLabel, ctaLink }) => {
   const videoElement = useRef(null);
   const sourceElement = useRef(null);
+  const containerElement = useRef(null);
 
   const [minHeight, setMinHeight] = useState(0);
 
-  const containerElement = useCallback((element) => {
-    if (element !== null) {
-      setMinHeight(element.getBoundingClientRect().width * 0.35);
-    }
-  }, []);
-
   useEffect(() => {
+    if (containerElement?.current !== null) {
+      setMinHeight(
+        containerElement.current.getBoundingClientRect()?.width *
+          (isDesktop ? 0.35 : 1.5)
+      );
+    }
     videoElement.current?.pause();
     sourceElement.current?.setAttribute(
       "src",

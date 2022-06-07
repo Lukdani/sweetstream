@@ -14,7 +14,7 @@ const FrontPage = ({ isDesktop }) => {
   return (
     <div className="frontpage">
       <Hero isDesktop={isDesktop} />
-      <Features />
+      <Features isDesktop={isDesktop} />
       <PitchLine />
       <PoweredBy />
       <VideoHeader

@@ -36,7 +36,7 @@ const Navbar = ({ isDesktop }) => {
               className="navbar-link"
               to={`/${navItem.path}`}
               onClick={() => {
-                if (isDesktop) toggleShowNav(!showNav);
+                if (!isDesktop) toggleShowNav(false);
               }}
             >
               {navItem.label}
