@@ -2,4 +2,5 @@
   height: 60px;
   margin: auto;
   display: block;
+  background-color: var(--mediumGray);
 }

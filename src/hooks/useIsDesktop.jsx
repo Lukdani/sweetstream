@@ -8,7 +8,6 @@ const useIsDesktop = () => {
     if (isDesktop !== isNowDesktop) {
       setIsDesktop(isNowDesktop);
     }
-    console.log(window.innerWidth);
   }, [isDesktop]);
 
   useEffect(() => {

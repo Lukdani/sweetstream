@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container-lg">
         <div className="row content-container">
-          <div className="col-12 col-lg-4">
+          <div className="col-12 col-lg-4 footer-contact">
             <h4>Contact</h4>
             <div className="footer-contact-item row">
               <div className="col-auto">
@@ -32,16 +32,25 @@ const Footer = () => {
           </div>
           <div className="col-12 col-lg-4 footer-partners">
             <h4>Partners</h4>
-            <img
-              src={ConfluentLogo}
-              alt="Confluent logo"
-              className="footer-partners-background"
-            />
-            <img
-              src={SGLogo}
-              alt="Sweet Geeks logo"
-              className="footer-partners-background"
-            />
+            <a
+              href="https://www.confluent.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={ConfluentLogo}
+                alt="Confluent logo"
+                className="footer-partners-background"
+              />
+            </a>
+            <h4 className="mt-3">Powered by</h4>
+            <a href="https://sweetgeeks.dk/" target="_blank" rel="noreferrer">
+              <img
+                src={SGLogo}
+                alt="Sweet Geeks logo"
+                className="footer-partners-background"
+              />
+            </a>
           </div>
           <div className="col-12 col-lg-4 footer-some">
             <h4>Follow us</h4>
@@ -51,6 +60,15 @@ const Footer = () => {
               rel="noreferrer"
             >
               <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <br />
+            <a
+              className="footer-some-video"
+              href="https://youtu.be/bi5b1tJ8pqk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Watch our video
             </a>
           </div>
         </div>

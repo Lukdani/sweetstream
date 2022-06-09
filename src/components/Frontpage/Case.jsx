@@ -8,15 +8,10 @@ const Case = ({ caseItem }) => {
   const caseContainer = useRef(null);
   const imageContainer = useRef(null);
   const [isExpanded, setIsExpanded] = useState();
-  const { randomBytes, createRandomBytes } = useRandomBytes(
-    imageContainer,
-    false,
-    false
-  );
+  const { randomBytes } = useRandomBytes(imageContainer, false, false);
 
   useEffect(() => {
     setIsExpanded(caseContainer.current?.clientHeight > 90 ? false : undefined);
-    createRandomBytes();
   }, []);
 
   return (

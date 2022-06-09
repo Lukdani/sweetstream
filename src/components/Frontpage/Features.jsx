@@ -85,7 +85,7 @@ const Features = ({ isDesktop }) => {
                 <iframe
                   width={videoContainerWidth}
                   height={videoContainerWidth * 0.5625}
-                  src="https://www.youtube.com/embed/NXQSVozKSNU"
+                  src="https://www.youtube.com/embed/bi5b1tJ8pqk"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -95,9 +95,10 @@ const Features = ({ isDesktop }) => {
             </div>
           </div>
           <h4
+            id="features"
             className="features-header"
             style={{
-              color: "var(--primary)",
+              color: "var(--secondary)",
               scrollMarginTop: "var(--navbar-height)",
             }}
             ref={featuresElement}

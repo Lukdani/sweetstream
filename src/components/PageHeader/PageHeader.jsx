@@ -150,11 +150,8 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
 
                         {sections.map((sectionItem) => (
                           <span key={sectionItem.title}>
-                            <h4>
-                              {/*<i className={`fas fa-${sectionItem.icon}`} />*/}
-                              {sectionItem.title}
-                            </h4>
-                            <p>{sectionItem.text}</p>
+                            <h4>{sectionItem.title}</h4>
+                            {sectionItem.text}
                           </span>
                         ))}
                         {ctaElement?.current ? (

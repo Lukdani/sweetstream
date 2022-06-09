@@ -2,6 +2,7 @@
   padding: 2rem;
   background-color: var(--primary);
   color: var(--light);
+  font-size: 1.15rem;
 }
 
 .get-started-form h3 {

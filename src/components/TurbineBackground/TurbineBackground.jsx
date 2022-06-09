@@ -35,7 +35,7 @@ const TurbineBackground = ({ containerElement }) => {
         remainingWidth < minHeight
           ? remainingWidth
           : Math.floor(Math.random() * (maxHeight - minHeight) + minHeight);
-      const opacity = Math.random() * (0.75 - 0.5) + 0.5 / 3;
+      const opacity = Math.random() * (0.2 - 0.3) + 0.5 / 3;
       remainingWidth -= width;
       images.push({ width, opacity });
     }

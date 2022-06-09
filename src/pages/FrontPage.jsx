@@ -20,9 +20,14 @@ const FrontPage = ({ isDesktop }) => {
       <VideoHeader
         isDesktop={isDesktop}
         videoName="hero"
-        text="Case we have solved"
+        text={
+          <>
+            We are experienced
+            <br /> in the wind domain
+          </>
+        }
         ctaLink="/solved-cases"
-        ctaLabel="View cases"
+        ctaLabel="Cases we have solved"
       />
     </div>
   );

@@ -8,14 +8,14 @@ const PitchLine = () => {
       <div className="row pitchLine content-container">
         <div className="col-12">
           <i className="pitchLine-icon fa-solid fa-tags mb-2"></i>
-          <h2>Gather from endless tags</h2>
+          <h2>Stream from endless tags</h2>
           <p>
-            Gather data from all tags with very limitied margin cost.
+            Gather data from all tags with very low margin cost.
             <br />
-            Gather from all industri standards
+            Stream from all industri standards
             <br />
-            such as <IndustriStandard text="IEC 104" />{" "}
-            <IndustriStandard text="OPC-XML DA" /> and{" "}
+            such as <IndustriStandard text="IEC 104" />
+            <IndustriStandard text="OPC-XML DA" />
             <IndustriStandard text="OPC-UA" />
           </p>
         </div>

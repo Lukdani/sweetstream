@@ -43,6 +43,7 @@ function App() {
               path="solved-cases"
               element={<Cases isDesktop={isDesktop} />}
             />
+            <Route path="*" element={<p>Not found</p>} />
           </Routes>
         </main>
       </BrowserRouter>

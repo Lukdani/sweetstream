@@ -1,5 +1,6 @@
 .powered-by-container {
-  background-color: var(--white);
+  /*background-color: var(--white);*/
+  border: 4px solid var(--primary);
 }
 
 .powered-by-content-container {

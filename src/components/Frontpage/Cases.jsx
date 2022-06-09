@@ -16,16 +16,17 @@ const pageHeaderItems = {
     },
   ],
   videoName: "hero",
-  cta: { label: "Solved cases" },
+  cta: { label: "Cases we have solved" },
 };
 const cases = [
   {
-    header: "1000 turbines",
+    header: "1.000 turbines",
     year: 2021,
     imageName: "1000_turbines.png",
     content: (
       <p>
         The client operated 1000 turbines placed on 12 different farms.
+        <br />
         <br />
         Some turbines used the OPC-XML standard, others used the OPC-UA
         standard.
@@ -38,14 +39,6 @@ const cases = [
         different farms.
         <br />
         <br />
-        Some turbines used the OPC-XML standard, others used the OPC-UA
-        standard.
-        <br />
-        Some parks were placed onshore - others offshore.
-        <br />
-        <br />
-        We had to implement the solution with neat regard to the customer's
-        security zone model.
       </p>
     ),
   },
@@ -55,15 +48,18 @@ const cases = [
     year: 2021,
     content: (
       <p>
-        The client operated 1000 turbines placed on 12 different farms.
+        The client operated 500 turbines placed on 6 different farms.
         <br />
-        Some turbines used the OPC-XML standard, others used the OPC-UA
-        standard.
         <br />
-        Some parks were placed onshore - others offshore.
+        The majority of turbines had generated data for years, and now the data
+        format had to be changed for future projects involving AI.
         <br />
-        We had to implement the solution with neat regard to the customer's
-        security zone model.
+        <br />
+        The task was to update the data format while keeping the old data still
+        available for existing consumers.
+        <br />
+        <br />
+        We solved the above using modern Kafka tools.
       </p>
     ),
   } /*
@@ -107,8 +103,9 @@ const Cases = ({ isDesktop }) => {
             <div className="col-12">
               <h4>Solved cases</h4>
               <p className="mb-4 mt-2">
-                We have implemented the solution several times. <br /> Below
-                you'll read some of the special obstacles, we have overcome.
+                We are experienced in implementing the solution in the wind
+                domain. <br /> Below you can read a sample of cases, we have
+                solved.
               </p>
             </div>
             <div className="col-12">

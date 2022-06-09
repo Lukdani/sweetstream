@@ -4,13 +4,14 @@
   border: 1px solid var(--mediumGray);
 }
 
-.custom-card.custom-card--alt{
+.custom-card.custom-card--alt {
   background-color: var(--secondary);
   color: var(--light);
 }
 
 .custom-card-imageHeader {
   max-width: 100%;
+  background-color: var(--mediumGray);
 }
 
 .custom-card.custom-card--noBorder {

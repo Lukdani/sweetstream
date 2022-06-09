@@ -3,7 +3,6 @@ import "./HowItWorks.css";
 import { useEffect, useRef } from "react";
 import PageHeader from "../PageHeader/PageHeader";
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
 import GetStartedButton from "../Button/GetStartedButton";
 
 const pageHeaderItems = {
@@ -16,36 +15,42 @@ const pageHeaderItems = {
       title: "What does it do?",
       icon: "question-circle",
       text: (
-        <span>
-          Sweet Stream acquires and transforms data from turbines and pushes it
-          into a <strong>Kafka cluster</strong>.
-          <br />
-          <br />
-          Sweet Stream - together with the Kafka platform - fully supports the
-          zone model of Industrial Control Systems{" "}
-          <strong>(ISA/IEC 62443)</strong>.
-        </span>
+        <>
+          <p className="mb-2">
+            Sweet Stream acquires and transforms data from turbines and pushes
+            it into a <strong>Kafka cluster</strong>.
+          </p>
+          <p>
+            Sweet Stream - together with the Kafka platform - is a streaming
+            solution that supports the zone model of Industrial Control Systems{" "}
+            <strong>(ISA/IEC 62443)</strong> and industrial standards (
+            <strong>IEC 104</strong>,<strong> OPC-XML DA</strong> and{" "}
+            <strong>OPC-UA</strong>)
+          </p>
+        </>
       ),
     },
     {
       title: "How is it implemented?",
       icon: "wrench",
       text: (
-        <span>
-          The first step is to install the Sweet Stream connector on your edge
-          infrastructure.
-          <br />
-          <br />
-          The stream can now be configured - and you can read from as many data
-          sources and tags as you want.
-          <br />
-          <br />
-          Our{" "}
-          <Link className="hyperlink" to="/our-team">
-            consultants
-          </Link>{" "}
-          will assist your team with all configuration work.
-        </span>
+        <>
+          <p className="mb-2">
+            The first step is to install the Sweet Stream connector on your edge
+            infrastructure.
+          </p>
+          <p className="mb-2">
+            The stream can now be configured - and you can read from as many
+            data sources and tags as you want.
+          </p>
+          <p>
+            Our{" "}
+            <Link className="hyperlink" to="/our-team">
+              consultants
+            </Link>{" "}
+            will assist your team with all configuration work.
+          </p>
+        </>
       ),
     },
   ],
@@ -57,7 +62,7 @@ const pageHeaderItems = {
 const items = [
   {
     header: "Install the connector",
-    text: "Install the Sweet Stream connector on your edge infrastructure.\\n It will acquire data from any industry standard protocol and push it into a Kafka cluster. \\n The software is designed as a zero-footprint component (very light weight) and can be installed on virtually any device, old as new, powerful or not",
+    text: "Install the Sweet Stream connector on your edge infrastructure.\\n It will acquire data from any industrial standard protocol and push it into a Kafka cluster. \\n The software is designed as a zero-footprint component (very light weight) and can be installed on virtually any device, old as new, powerful or not",
     imageName: "geek_tool.png",
     imageNameAlt: "geek_tool_2.png",
   },

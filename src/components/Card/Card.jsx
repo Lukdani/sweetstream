@@ -14,9 +14,9 @@ const Card = ({
     let classes = rootClass;
     if (noBorder) classes += ` ${rootClass + "--noBorder"}`;
     if (centerAlign) classes += " text-center";
-    if (alternate) classes += " custom-card--alt"
+    if (alternate) classes += " custom-card--alt";
     return classes;
-  }, [centerAlign, noBorder]);
+  }, [alternate, centerAlign, noBorder]);
 
   return (
     <div className={classes}>

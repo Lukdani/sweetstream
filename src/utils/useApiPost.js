@@ -1,7 +1,6 @@
 import { useCallback, useState } from "react";
 
-const fullUrl = (url) =>
-  `http://localhost:8888/sweetstream_backend/api/${url}.php`;
+const fullUrl = (url) => `${process.env.REACT_APP_API_URL}api/${url}.php`;
 
 const useApiPost = ({ url, body }) => {
   const [isLoading, setIsLoading] = useState(false);

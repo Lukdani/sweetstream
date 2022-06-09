@@ -4,8 +4,8 @@ const TeamMember = ({ teamMember }) => {
   return (
     <div
       className="team-member-container"
-      itemscope
-      itemtype="https://schema.org/Person"
+      itemScope
+      itemType="https://schema.org/Person"
     >
       <div className="row">
         <div className="col-5">
@@ -14,12 +14,12 @@ const TeamMember = ({ teamMember }) => {
           </a>
         </div>
         <div className="col-7">
-          <h4 itemprop="name">{teamMember.empName}</h4>
+          <h4 itemProp="name">{teamMember.empName}</h4>
         </div>
 
         <div className="col-5">
           <img
-            itemprop="image"
+            itemProp="image"
             src={`images/staff/${teamMember.empImageName}`}
             alt={teamMember.empName}
           />
@@ -30,9 +30,9 @@ const TeamMember = ({ teamMember }) => {
             {teamMember.empPhd ? " (PhD)" : ""}
           </h4>
           <div className="team-member-info-container">
-            <p itemprop="jobTitle">
+            <p itemProp="jobTitle">
               {teamMember.empDescription.split("<br/>").map((item) => (
-                <span>
+                <span key={item}>
                   {item}
                   <br />
                 </span>
@@ -42,8 +42,10 @@ const TeamMember = ({ teamMember }) => {
               <>
                 <h5 className="team-member-info-roles">Roles</h5>
                 <ul>
-                  {teamMember.roles.map((role) => (
-                    <li>{role.roleName}</li>
+                  {teamMember.roles.map((role, index) => (
+                    <li key={teamMember.empName + role + index}>
+                      {role.roleName}
+                    </li>
                   ))}
                 </ul>
               </>

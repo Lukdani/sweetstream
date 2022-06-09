@@ -38,8 +38,9 @@ body {
 
 .hyperlink {
   text-decoration: none;
+  font-weight: bold;
   color: inherit;
-  color: var(--primary) !important;
+  color: var(--secondary) !important;
 }
 
 .hyperlink:hover {

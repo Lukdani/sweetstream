@@ -4,9 +4,18 @@ footer {
   color: var(--light);
 }
 
+.footer-contact h4 {
+  text-align: center;
+}
+
 .footer-partners img {
   width: 250px;
   padding: 0.5rem;
+}
+
+.footer-partners {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .footer-partners img:not(:last-of-type) {
@@ -22,17 +31,34 @@ footer {
 }
 
 .footer-some {
-  text-align: right;
+  text-align: center;
+  margin-top: 2rem;
 }
-
 .footer-some a {
   font-size: 3rem;
   display: inline-block;
   color: var(--light);
   transition: all ease-in 0.15s;
 }
+.footer-some > .footer-some-video {
+  font-size: 1rem;
+  text-decoration: none;
+}
 
 .footer-some a:hover {
   transform: scale(1.15);
   color: var(--primary);
+}
+
+@media (min-width: 992px) {
+  .footer-contact h4 {
+    text-align: left;
+  }
+  .footer-partners {
+    text-align: left;
+    margin-top: 0;
+  }
+  .footer-some {
+    text-align: right;
+  }
 }

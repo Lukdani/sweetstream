@@ -33,7 +33,7 @@ const GetStarted = () => {
         <div className="container-lg">
           <div className="row content-container text-center">
             <div className="col-12">
-              <h2>Ready or not?</h2>
+              <h2>?</h2>
               <br />
               <h4 className="text-center">
                 Sometimes your organization is ready go.
