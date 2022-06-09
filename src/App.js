@@ -12,6 +12,7 @@ import Team from "./components/Team/Team";
 import useIsDesktop from "./hooks/useIsDesktop";
 import { createBrowserHistory } from "history";
 import Cases from "./components/Frontpage/Cases";
+import NotFound from "./components/VideoHeader/NotFound/NotFound";
 
 export const history = createBrowserHistory({
   basename: process.env.PUBLIC_URL,
@@ -43,7 +44,7 @@ function App() {
               path="solved-cases"
               element={<Cases isDesktop={isDesktop} />}
             />
-            <Route path="*" element={<p>Not found</p>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>

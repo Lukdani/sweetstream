@@ -33,10 +33,10 @@ const GetStarted = () => {
         <div className="container-lg">
           <div className="row content-container text-center">
             <div className="col-12">
-              <h2>?</h2>
+              <h2>Ready when you are</h2>
               <br />
               <h4 className="text-center">
-                Sometimes your organization is ready go.
+                Sometimes your organization is ready to go.
                 <br /> Sometimes it needs more time to evaluate.
               </h4>
               <br />
