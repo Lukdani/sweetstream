@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from "react";
+import useOnResize from "../../hooks/useOnResize";
 import useRandomBytes from "../../hooks/useRandomBytes";
 import Button from "../Button/Button";
 import "./PageHeader.css";
@@ -24,6 +25,16 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
     );
   }, []);
 
+  const handleMinHeight = useCallback(() => {
+    if (containerElement?.current !== null) {
+      setMinHeight(
+        containerElement.current.getBoundingClientRect()?.width *
+          (isDesktop ? 0.35 : 1.5)
+      );
+    }
+  }, [isDesktop]);
+  const resizeActive = useOnResize(handleMinHeight);
+
   const setNewIndex = useCallback(() => {
     setImageUrlIndex((prevIndex) =>
       prevIndex >= backgroundImages?.length - 1 ? 0 : prevIndex + 1
@@ -38,12 +49,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
   }, [setNewIndex]);
 
   useEffect(() => {
-    if (containerElement?.current !== null) {
-      setMinHeight(
-        containerElement.current.getBoundingClientRect()?.width *
-          (isDesktop ? 0.35 : 1.5)
-      );
-    }
+    handleMinHeight();
     if (isDesktop && videoElement.current && sourceElement.current) {
       videoElement.current?.pause();
       sourceElement.current?.setAttribute(
@@ -53,7 +59,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
       videoElement.current?.load();
       videoElement.current?.play();
     }
-  }, [isDesktop, videoName]);
+  }, [handleMinHeight, isDesktop, videoName]);
 
   const sectionContainer = useRef(null);
   return backgroundImages?.length > 0 || videoName ? (
