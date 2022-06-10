@@ -9,6 +9,7 @@
   border: 1px solid var(--mediumGray);
   padding: 2rem;
   border-radius: 0.25rem;
+  height: 100%;
 }
 
 .team-member-li-icon {
