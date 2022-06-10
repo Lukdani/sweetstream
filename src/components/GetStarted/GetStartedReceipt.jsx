@@ -28,7 +28,6 @@ const GetStartedReceipt = ({ request }) => {
     return contactBySetentence;
   }, [leadEmail, leadEmailPref, leadPhone, leadPhonePref]);
 
-  console.log(request);
   return (
     <p>
       Hi, <strong>{leadName}</strong>. We have received your message.

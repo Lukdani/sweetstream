@@ -1,10 +1,14 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import GetStartedForm from "../components/GetStarted/GetStartedForm";
 import GetStartedIntro from "../components/GetStarted/GetStartedIntro";
 import TurbineBackground from "../components/TurbineBackground/TurbineBackground";
 
 const GetStarted = () => {
   const element = useRef(null);
+  useEffect(() => {
+    document.title = "Get started";
+  }, []);
+
   return (
     <>
       <div

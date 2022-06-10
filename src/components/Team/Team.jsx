@@ -30,6 +30,10 @@ const Team = () => {
     fetchData();
   }, [fetchData]);
 
+  useEffect(() => {
+    document.title = "Our team";
+  }, []);
+
   return (
     <>
       <PageHeader item={pageHeaderItems} ctaElement={element} />

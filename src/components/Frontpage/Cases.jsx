@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import PageHeader from "../PageHeader/PageHeader";
 import Case from "./Case";
 import "./Cases.css";
@@ -83,7 +83,10 @@ const cases = [
 ];
 
 const Cases = ({ isDesktop }) => {
-  console.log(isDesktop);
+  useEffect(() => {
+    document.title = "Solved cases";
+  }, []);
+
   const element = useRef();
   return (
     <>

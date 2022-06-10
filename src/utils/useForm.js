@@ -12,9 +12,7 @@ const useForm = (initialData) => {
     setFormData({ ...initialData });
   }, [initialData]);
 
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
+  useEffect(() => {}, [formData]);
 
   const handleChange = useCallback((e) => {
     const name = e.currentTarget?.name;

@@ -10,8 +10,6 @@ const TurbineBackground = ({ containerElement }) => {
   const measuredRef = useCallback((node) => {
     setTimeout(() => {
       if (node !== null) {
-        console.log(node);
-        console.log(node.getBoundingClientRect().height);
         setHeight(node.getBoundingClientRect().height);
       }
     }, 200);
