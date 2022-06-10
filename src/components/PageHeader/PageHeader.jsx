@@ -25,15 +25,24 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
     );
   }, []);
 
-  const handleMinHeight = useCallback(() => {
+  const handleResize = useCallback(() => {
     if (containerElement?.current !== null) {
       setMinHeight(
         containerElement.current.getBoundingClientRect()?.width *
           (isDesktop ? 0.35 : 1.5)
       );
     }
-  }, [isDesktop]);
-  const resizeActive = useOnResize(handleMinHeight);
+    if (videoElement.current && sourceElement.current) {
+      videoElement.current?.pause();
+      sourceElement.current?.setAttribute(
+        "src",
+        `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
+      );
+      videoElement.current?.load();
+      videoElement.current?.play();
+    }
+  }, [isDesktop, videoName]);
+  const resizeActive = useOnResize(handleResize);
 
   const setNewIndex = useCallback(() => {
     setImageUrlIndex((prevIndex) =>
@@ -49,17 +58,8 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
   }, [setNewIndex]);
 
   useEffect(() => {
-    handleMinHeight();
-    if (isDesktop && videoElement.current && sourceElement.current) {
-      videoElement.current?.pause();
-      sourceElement.current?.setAttribute(
-        "src",
-        `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
-      );
-      videoElement.current?.load();
-      videoElement.current?.play();
-    }
-  }, [handleMinHeight, isDesktop, videoName]);
+    handleResize();
+  }, [handleResize, isDesktop, videoName]);
 
   const sectionContainer = useRef(null);
   return backgroundImages?.length > 0 || videoName ? (

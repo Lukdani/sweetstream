@@ -8,31 +8,30 @@ const VideoHeader = ({ isDesktop, videoName, text, ctaLabel, ctaLink }) => {
   const videoElement = useRef(null);
   const sourceElement = useRef(null);
   const containerElement = useRef(null);
-  const handleMinHeight = useCallback(() => {
+  const handleResize = useCallback(() => {
     if (containerElement?.current !== null) {
       setMinHeight(
         containerElement.current.getBoundingClientRect()?.width *
           (isDesktop ? 0.35 : 1.5)
       );
+      if (videoElement.current && sourceElement.current) {
+        videoElement.current?.pause();
+        sourceElement.current?.setAttribute(
+          "src",
+          `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
+        );
+        videoElement.current?.load();
+        videoElement.current?.play();
+      }
     }
-  }, [isDesktop]);
-  const resizeActive = useOnResize(handleMinHeight);
+  }, [isDesktop, videoName]);
+  const resizeActive = useOnResize(handleResize);
 
   const [minHeight, setMinHeight] = useState(0);
 
   useEffect(() => {
-    handleMinHeight();
-
-    if (isDesktop && videoElement.current && sourceElement.current) {
-      videoElement.current?.pause();
-      sourceElement.current?.setAttribute(
-        "src",
-        `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
-      );
-      videoElement.current?.load();
-      videoElement.current?.play();
-    }
-  }, [handleMinHeight, isDesktop, videoName]);
+    handleResize();
+  }, [handleResize, isDesktop, videoName]);
 
   return (
     <div
