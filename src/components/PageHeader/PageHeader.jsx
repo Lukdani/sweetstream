@@ -44,13 +44,15 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
           (isDesktop ? 0.35 : 1.5)
       );
     }
-    videoElement.current?.pause();
-    sourceElement.current?.setAttribute(
-      "src",
-      `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
-    );
-    videoElement.current?.load();
-    videoElement.current?.play();
+    if (isDesktop && videoElement.current && sourceElement.current) {
+      videoElement.current?.pause();
+      sourceElement.current?.setAttribute(
+        "src",
+        `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
+      );
+      videoElement.current?.load();
+      videoElement.current?.play();
+    }
   }, [isDesktop, videoName]);
 
   const sectionContainer = useRef(null);
@@ -154,7 +156,9 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
 
                         {sections.map((sectionItem) => (
                           <span key={sectionItem.title}>
-                            <h4>{sectionItem.title}</h4>
+                            <h4 className="page-header-subtitle">
+                              {sectionItem.title}
+                            </h4>
                             {sectionItem.text}
                           </span>
                         ))}

@@ -17,13 +17,16 @@ const VideoHeader = ({ isDesktop, videoName, text, ctaLabel, ctaLink }) => {
           (isDesktop ? 0.35 : 1.5)
       );
     }
-    videoElement.current?.pause();
-    sourceElement.current?.setAttribute(
-      "src",
-      `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
-    );
-    videoElement.current?.load();
-    videoElement.current?.play();
+
+    if (isDesktop && videoElement.current && sourceElement.current) {
+      videoElement.current?.pause();
+      sourceElement.current?.setAttribute(
+        "src",
+        `./videos/${videoName}_${isDesktop ? "desktop" : "mobile"}.mp4`
+      );
+      videoElement.current?.load();
+      videoElement.current?.play();
+    }
   }, [isDesktop, videoName]);
 
   return (

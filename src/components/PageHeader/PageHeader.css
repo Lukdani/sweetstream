@@ -25,7 +25,9 @@
   animation: rotate 4s linear infinite;
 }
 
-.page-header--imgEdition {
+.page-header.page-header--sections .page-header-subtitle {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .page-header-container {
@@ -138,10 +140,6 @@
 
 .page-header.page-header--sections h4 {
   margin-top: 2rem;
-}
-
-.page-header.page-header--sections h4:first-of-type {
-  margin-top: 1rem;
 }
 
 @keyframes zoomOut {

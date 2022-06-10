@@ -147,9 +147,10 @@ const GetStartedForm = () => {
     </div>
   ) : (
     <form ref={containerElement} className="get-started-form">
-      <h3 className="py-3">
+      <h3 className="pt-3 pb-1">
         Let's get in touch <i className="fas fa-comments" />
       </h3>
+      <p>Leave us a message, and we will get back to you ASAP.</p>
       {inputs.map((inputElement) => (
         <div key={`get-started-form-${inputElement.name}`} className="mb-3">
           {inputElement.type === "checkbox" ? (

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 import useRandomBytes from "../../hooks/useRandomBytes";
 import AnimatedTurbine from "../AnimatedTurbine";
@@ -64,7 +65,9 @@ const Hero = ({ isDesktop }) => {
               <div className="row">
                 <div className="col">
                   <GetStartedButton />
-                  <Button color="secondary" label="Read more" />
+                  <Link to="/how-it-works">
+                    <Button color="secondary" label="Read more" />
+                  </Link>
                 </div>
               </div>
             </div>

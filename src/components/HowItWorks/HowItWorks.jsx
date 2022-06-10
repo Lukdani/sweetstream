@@ -16,7 +16,7 @@ const pageHeaderItems = {
       icon: "question-circle",
       text: (
         <>
-          <p className="mb-2">
+          <p className="mb-3">
             Sweet Stream acquires and transforms data from turbines and pushes
             it into a <strong>Kafka cluster</strong>.
           </p>
@@ -35,11 +35,11 @@ const pageHeaderItems = {
       icon: "wrench",
       text: (
         <>
-          <p className="mb-2">
+          <p className="mb-3">
             The first step is to install the Sweet Stream connector on your edge
             infrastructure.
           </p>
-          <p className="mb-2">
+          <p className="mb-3">
             The stream can now be configured - and you can read from as many
             data sources and tags as you want.
           </p>

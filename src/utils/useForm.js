@@ -24,8 +24,8 @@ const useForm = (initialData) => {
 
   const handleCheckBoxChange = useCallback((e) => {
     const name = e.target?.name;
-    const value = e.target?.checked;
-    if (name && value) {
+    const value = e.target.checked;
+    if (name) {
       setFormData((prevData) => ({ ...prevData, [name]: value }));
     }
   }, []);

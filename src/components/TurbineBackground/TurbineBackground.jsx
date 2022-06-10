@@ -33,7 +33,7 @@ const TurbineBackground = ({ containerElement }) => {
         remainingWidth < minHeight
           ? remainingWidth
           : Math.floor(Math.random() * (maxHeight - minHeight) + minHeight);
-      const opacity = Math.random() * (0.2 - 0.3) + 0.5 / 3;
+      const opacity = Math.random() * (0.3 - 0.4) + 0.4 / 3;
       remainingWidth -= width;
       images.push({ width, opacity });
     }
@@ -65,8 +65,9 @@ const TurbineBackground = ({ containerElement }) => {
             overflow: "hidden",
           }}
         >
-          {turbineImages?.map((image) => (
+          {turbineImages?.map((image, index) => (
             <img
+              key={`turbinebackground-${index}`}
               src="./images/turbine_field.png"
               alt="turbine illustration"
               style={{
