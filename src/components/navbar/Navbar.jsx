@@ -44,11 +44,14 @@ const Navbar = ({ isDesktop }) => {
           </li>
         ))}
         <li>
-          <GetStartedButton color={isDesktop ? "primary" : "secondary"} />
+          <GetStartedButton
+            color={isDesktop ? "primary" : "secondary"}
+            callback={isDesktop ? null : () => toggleShowNav(!showNav)}
+          />
         </li>
       </ul>
     ),
-    [isDesktop]
+    [isDesktop, showNav, toggleShowNav]
   );
 
   return (

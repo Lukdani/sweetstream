@@ -16,6 +16,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
   );
   const [imageUrlIndex, setImageUrlIndex] = useState(0);
   const [maxImageHeight, setMaxImageHeight] = useState(0);
+  const [minHeight, setMinHeight] = useState(0);
 
   useEffect(() => {
     setMaxImageHeight(
@@ -37,6 +38,12 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
   }, [setNewIndex]);
 
   useEffect(() => {
+    if (containerElement?.current !== null) {
+      setMinHeight(
+        containerElement.current.getBoundingClientRect()?.width *
+          (isDesktop ? 0.35 : 1.5)
+      );
+    }
     videoElement.current?.pause();
     sourceElement.current?.setAttribute(
       "src",
@@ -52,10 +59,7 @@ const PageHeader = ({ item, isDesktop, ctaElement }) => {
       ref={containerElement}
       style={{
         position: "relative",
-        minHeight:
-          backgroundImages?.length > 0 || videoName
-            ? containerElement?.current?.getBoundingClientRect().width * 0.35
-            : null,
+        minHeight: backgroundImages?.length > 0 || videoName ? minHeight : null,
       }}
       className={
         backgroundImages?.length > 0 || videoName

@@ -34,7 +34,7 @@ function App() {
               element={<FrontPage isDesktop={isDesktop} />}
             />
             <Route path="contact" element={<Contact />} />
-            <Route path="our-team" element={<Team />} />
+            <Route path="our-team" element={<Team isDesktop={isDesktop} />} />
             <Route
               path="how-it-works"
               element={<HowItWorks isDesktop={isDesktop} />}

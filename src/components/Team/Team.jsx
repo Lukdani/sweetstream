@@ -22,7 +22,7 @@ const pageHeaderItems = {
   cta: { label: "View team" },
 };
 
-const Team = () => {
+const Team = ({ isDesktop }) => {
   const element = useRef();
   const { data, fetchData } = useApiGet({ url: getRequest });
 
@@ -36,7 +36,11 @@ const Team = () => {
 
   return (
     <>
-      <PageHeader item={pageHeaderItems} ctaElement={element} />
+      <PageHeader
+        item={pageHeaderItems}
+        ctaElement={element}
+        isDesktop={isDesktop}
+      />
       <div
         ref={element}
         style={{ scrollMarginTop: "var(--navbar-height)" }}

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
-const GetStartedButton = (color) => {
+const GetStartedButton = ({ color, callback }) => {
   return (
-    <Link to="/get-started">
+    <Link to="/get-started" onClick={callback || null}>
       {" "}
       <Button
         label="Get started"
